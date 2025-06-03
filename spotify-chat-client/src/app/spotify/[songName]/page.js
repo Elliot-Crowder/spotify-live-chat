@@ -5,18 +5,25 @@ import ProgressBar from "./ProgressBar";
 import { Vibrant } from "node-vibrant/node";
 export default async function songCard({ params }) {
 	const songData = await getSongData(params);
-
+	let colorGradient;
 	//this will be a link to a cdn in the future so it wont be necessary to create the link like this
-	const localUrl = "http://localhost:3000" + songData.imgRef;
-	console.log(localUrl);
-	const vibrant = new Vibrant(localUrl);
-	const palette = await vibrant.getPalette();
-	const backgroundColor = palette.Vibrant.rgb;
-	console.log(backgroundColor);
-	const colorGradient = `linear-gradient(
+	try {
+		const localUrl = "http://localhost:3000" + songData.imgRef;
+		console.log(localUrl);
+		const vibrant = new Vibrant(localUrl);
+		const palette = await vibrant.getPalette();
+		const backgroundColor = palette.Vibrant.rgb;
+		const backgroundColor2 = palette.DarkVibrant.rgb;
+		console.log(backgroundColor);
+		colorGradient = `linear-gradient(
         to bottom,
         rgba(${backgroundColor[0]},${backgroundColor[1]},${backgroundColor[2]},1) 0%, 
-        rgba(${backgroundColor[0]},${backgroundColor[1]},${backgroundColor[2]},0) 80%)`;
+		rgba(${backgroundColor2[0]},${backgroundColor2[1]},${backgroundColor2[2]},1) 60%,
+        rgba(${backgroundColor[0]},${backgroundColor[1]},${backgroundColor[2]},0) 100%)`;
+	} catch (err) {
+		console.log(err);
+		colorGradient = "rgb(37, 37, 37)";
+	}
 	return (
 		<div className={styles.songCard}>
 			<div
