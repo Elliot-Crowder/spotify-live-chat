@@ -1,0 +1,40 @@
+.progressBackground {
+	background-color: rgb(78, 78, 78);
+	width: 200px;
+	height: 3px;
+	border-radius: 10px;
+}
+
+.songProgress {
+	background-color: lightgrey;
+	height: 100%;
+	/*temporary width until it changes based on the current timestamp of the song*/
+	width: 50%;
+	transition: width 0.2s ease;
+	border-radius: inherit;
+	position: relative;
+}
+
+.progressBall {
+	position: absolute;
+	right: -5%;
+	top: 0;
+	transform: translate(0, -35%);
+	width: 9px;
+	height: 9px;
+	background-color: white;
+	border: 0.5px solid #000000;
+	border-radius: 50%;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.1s, transform 0.2s;
+}
+
+.progressBackground:hover .progressBall {
+	opacity: 1;
+	/* transform: translate(-50%, -50%) scale(1.2); */
+}
+
+.progressBackground:hover .songProgress {
+	background-color: rgb(30, 170, 65);
+}

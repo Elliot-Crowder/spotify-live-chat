@@ -1,0 +1,35 @@
+.songCard {
+	width: 250px;
+	height: 400px;
+	background-color: rgb(37, 37, 37);
+
+	/* overflow: hidden;
+	display: flex;
+	flex-direction: column; */
+}
+
+.songInfo {
+	width: 200px;
+	background-color: blue;
+	align-self: center;
+}
+
+.gradientOverlay {
+	height: 400px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.artist {
+}
+.barWrapper {
+	margin-top: 10px;
+	align-self: center;
+}
+.songImage {
+	border-radius: 5px;
+	align-self: center;
+}
+.songCard Image {
+	object-fit: fill;
+}
