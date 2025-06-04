@@ -1,35 +1,48 @@
 .songCard {
-	width: 250px;
-	height: 400px;
-	background-color: rgb(37, 37, 37);
-	/* overflow: hidden;
+  width: 250px;
+  height: 400px;
+  background-color: rgb(37, 37, 37);
+  /* overflow: hidden;
 	display: flex;
 	flex-direction: column; */
-	border-radius: 5px;
+  border-radius: 5px;
 }
 
 .songInfo {
-	width: 200px;
-	/* background-color: blue; */
-	align-self: center;
+  width: 200px;
+  /* background-color: blue; */
+  align-self: center;
+  color: white;
 }
 
 .gradientOverlay {
-	height: 400px;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .artist {
 }
 .barWrapper {
-	margin-top: 10px;
-	align-self: center;
+  margin-top: 10px;
+  align-self: center;
 }
 .songImage {
-	border-radius: 5px;
-	align-self: center;
+  border-radius: 5px;
+  align-self: center;
+  margin-top: 15px;
 }
 .songCard Image {
-	object-fit: fill;
+  object-fit: fill;
+}
+
+/* Styling for song navigation buttons */
+.songNavigation {
+  margin-top: 15px;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }

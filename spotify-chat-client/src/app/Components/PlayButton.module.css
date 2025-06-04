@@ -1,0 +1,21 @@
+.playButton {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.pauseIcon {
+  width: 24px;
+  height: 24px;
+  color: black;
+}
