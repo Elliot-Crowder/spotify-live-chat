@@ -9,6 +9,10 @@
   justify-content: center;
 }
 
+.playButton:hover {
+  background-color: darkgrey;
+}
+
 .playIcon {
   width: 24px;
   height: 24px;

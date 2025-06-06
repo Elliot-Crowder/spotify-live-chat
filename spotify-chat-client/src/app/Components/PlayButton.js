@@ -1,10 +1,14 @@
 "use client";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import styles from "./PlayButton.module.css";
-export default function PlayButton({ isPlaying, onToggle }) {
+import { PlaybackContext } from "./providers/PlaybackProvider";
+export default function PlayButton() {
+  const { isPlaying, onTogglePause } = useContext(PlaybackContext);
+  console.log("info: ");
+  console.log(PlaybackContext);
   return (
     <>
-      <button className={styles.playButton} onClick={onToggle}>
+      <button className={styles.playButton} onClick={onTogglePause}>
         {isPlaying ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
