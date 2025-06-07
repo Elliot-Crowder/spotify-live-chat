@@ -1,0 +1,80 @@
+.HeaderNavigation {
+  display: flex;
+  flex-direction: row;
+  padding: 8px 4px 8px 24px;
+}
+.HomeButton {
+  border-radius: 50%;
+  width: var(--buttonSize);
+  height: var(--buttonSize);
+  border: none;
+  background-color: rgb(48, 48, 48);
+}
+.HomeButton:hover {
+  background-color: rgb(63, 63, 63);
+}
+
+.HomeIcon {
+  width: 65%;
+  fill: none;
+}
+
+.SearchBar {
+  overflow: hidden;
+  background-color: rgb(44, 44, 44);
+  border-radius: 100px;
+  max-width: 100%;
+  /* width: 600px; */
+  display: flex;
+  justify-content: flex-start;
+  outline: 2px solid transparent;
+  transition: outline-color 0.5s ease-in-out;
+  transition: width 0.5s;
+  height: var(--buttonSize);
+  width: var(--buttonSize);
+}
+
+.expanded {
+  width: 100%;
+}
+.SearchBar:focus-within {
+  outline-color: white;
+}
+.SearchIcon {
+  width: 32px;
+  stroke: lightgrey;
+}
+
+.SearchSubmit {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 8px 8px;
+  aspect-ratio: 1;
+}
+
+.SearchInput {
+  border: none;
+  background: transparent;
+}
+
+.SearchInput:focus {
+  outline: none;
+}
+
+.LoginButton {
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 32px;
+  font-size: 16px;
+  text-align: center;
+  padding: 14px 3svw;
+  max-width: 12svw;
+}
+
+.LoginButton:hover {
+  background-color: rgb(224, 224, 224);
+}

@@ -1,6 +1,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --buttonSize: 50px;
 }
 
 @media (prefers-color-scheme: dark) {

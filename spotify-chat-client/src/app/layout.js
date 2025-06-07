@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import PlaybackProvider from "./Components/providers/PlaybackProvider";
-import { PlaybackContext } from "./Components/providers/PlaybackProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
